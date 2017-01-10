@@ -166,21 +166,15 @@ it(' menu changes visibility when the menu icon is clicked',function(){
 
 
 
-it('menu slides out and becomes visible and also slides back in and becomes hidden',function(){
+it('the menu changes visibility',function(){
 
 
 $('.icon-list').click(function(){
-  var slideMenu = document.body.className;
 
-expect(slideMenu).toContain(menu-hidden);
-});
-
-
-
+expect($('document.body')).toContain('body.menu-hidden');
 
 });
-
-
+});
 });
 /*  $('.icon-list').click();
   spyEvent.reset();

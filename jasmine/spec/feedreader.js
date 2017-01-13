@@ -28,7 +28,6 @@ $(function() {
 
 
 
-
         // This test to make sure the array of objects has a url
         it('has a url', function() {
             for (i = 0; i < allFeeds.length; i++) {
@@ -37,9 +36,6 @@ $(function() {
 
             }
         });
-
-
-
 
 
 
@@ -60,17 +56,13 @@ $(function() {
 
     describe('THE MENU', function() {
 
-  var a ;
+        var a;
 
         it('menu element is hidden by default', function() {
 
             var menuIsHidden = $('body').hasClass('menu-hidden');
-              expect(menuIsHidden).toBe(true);
+            expect(menuIsHidden).toBe(true);
         });
-
-
-
-
 
 
 
@@ -94,7 +86,6 @@ $(function() {
 
 
 
-
     describe('Initaial Entries', function() {
 
         beforeEach(function(done) {
@@ -104,7 +95,7 @@ $(function() {
         it(' there is at least a single .entry element within the .feed container.', function() {
             expect($('.feed, .entry').length).toBeGreaterThan(0);
 
-          });
+        });
 
     });
 

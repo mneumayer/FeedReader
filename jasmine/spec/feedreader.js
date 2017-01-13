@@ -120,18 +120,16 @@ $(function() {
 
             loadFeed(0, function() {
                 newfeed = $('.feed').find('h2').text();
-
                 console.log(newfeed);
-
-
-                expect(newfeed).not.toEqual(oldfeed);
+                done();
 
             });
 
 
-
+            expect(newfeed).not.toEqual(oldfeed);
 
         });
+
 
 
     });

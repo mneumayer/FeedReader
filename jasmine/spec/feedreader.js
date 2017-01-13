@@ -106,29 +106,30 @@ $(function() {
         var oldfeed, newfeed;
 
         beforeEach(function(done) {
-            loadFeed(1, function() {
+            loadFeed(0, function() {
                 oldfeed = $('.feed').find('h2').text();
+
+                //console.log(oldfeed);
+              loadFeed(1, function(){
+                newfeed = $('.feed').find('h2').text();
+                //console.log(newfeed);
                 done();
-                console.log(oldfeed);
+
             });
 
         });
-
+});
 
         it('new feed is loaded by loadFeed', function() {
+          expect(newfeed).not.toEqual(oldfeed);
 
-
-            loadFeed(0, function() {
-                newfeed = $('.feed').find('h2').text();
-                console.log(newfeed);
-                done();
 
             });
 
 
-            expect(newfeed).not.toEqual(oldfeed);
 
-        });
+
+
 
 
 
